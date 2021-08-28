@@ -1,6 +1,6 @@
 ﻿using Microsoft.Playwright;
 using System;
-using System.Reflection.Metadata;
+
 
 using var playwright = await Playwright.CreateAsync();
 await using var browser = await playwright.Webkit.LaunchAsync();
@@ -18,5 +18,6 @@ while (true)
     catch (Exception ex)
     {
         Console.WriteLine(ex.Message);
+        Console.ReadLine();
     }
 }
